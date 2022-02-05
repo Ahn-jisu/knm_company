@@ -1,0 +1,14 @@
+/* Arimo */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap');
+
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Montserrat:wght@700&display=swap');
+
+/* 나눔스퀘어 */
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
+
+
+body {
+    font-family: 'NanumSquare','Arimo','Montserrat', sans-serif;
+     }
+

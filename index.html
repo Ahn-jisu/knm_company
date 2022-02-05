@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>KNM Company</title>
+</head>
+<body>
+    <svg class="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120"></svg>
+    <header>
+        <div class="logo"><a href="/"><img src="img/logo.svg" alt="logo"></a></div>
+        <nav>
+            <ul>
+                <li><a href=""><span>HOME</span></a></li>
+                <li><a href=""><span>Introduction</span></a></li>
+                <li><a href=""><span>Services</span></a></li>
+                <li><a href=""><span>Team</span></a></li>
+                <li><a href=""><span>blog</span></a></li>
+                <li><a href=""><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- rainbow -->
+            <canvas id="webgl-canvas"></canvas>
+            <!-- vertexShader -->
+            <script id="js-vertex-shader" type="x-shader/x-vertex">
+                attribute vec3 position;
+
+                void main()	{
+                gl_Position = vec4(position, 1.0);
+                }
+            </script>
+            <!-- fragmentShader -->
+            <script id="js-fragment-shader" type="x-shader/x-fragment">
+                precision highp float;
+                uniform vec2 resolution;
+                uniform float time;
+                uniform float xScale;
+                uniform float yScale;
+                uniform float distortion;
+
+                void main() {
+                vec2 p = (gl_FragCoord.xy * 2.0 - resolution) / min(resolution.x, resolution.y);
+                
+                float d = length(p) * distortion;
+                
+                float rx = p.x * (1.0 + d);
+                float gx = p.x;
+                float bx = p.x * (1.0 - d);
+
+                float r = 0.05 / abs(p.y + sin((rx + time) * xScale) * yScale);
+                float g = 0.05 / abs(p.y + sin((gx + time) * xScale) * yScale);
+                float b = 0.05 / abs(p.y + sin((bx + time) * xScale) * yScale);
+                
+                gl_FragColor = vec4(r, g, b, 1.0);
+                }
+            </script>
+        <!-- rainbow end -->
+        <div class="shadow"></div>
+        <div class="title">
+            <h1>KNM MARKETING</h1>
+            <h4>MARKETING THAT everyone WANTS</h4>
+        </div>
+    </main>
+    <!-- AD -->
+    <section class="section01">
+        <section class="cluster clusterBurrowing">
+            <img class="clusterPieces triangle" src="img/tri.png"/>
+            <div class="clusterPieces owlBurrowing">
+                <img src="img/ad.png">
+                <div class="caption captionBurrowing"></div>
+            </div>
+            <div class="sec01-text clusterPieces dotsWhite">
+                <h3>
+                    데이터를 기반한<br>
+                    과학적인 마케팅이 궁금하다면?
+                </h3>
+                <h6>보이지 않는 것을 찾는 힘. 깊이 생각하고 크게 움직여 세상에 없던 마케팅을 찾다.</h6>
+                <button>Contact us</button>
+            </div>
+           
+        </section>      
+    </section>    
+    <!-- ABOUT KNM -->
+    <section class="section02">
+        <div class="pSection" id="pSection">
+            <div class="container1">
+                <div class="pContent">
+                <h2 class="skewElem"><strong>KNM</strong>MARKETING</h2>
+                <h6 class="skewElem">마케팅과 데이터 & 테크를 융합해 세상에 없던 마케팅을 합니다.</h6>
+                <button>Contact us</button>
+                </div>
+            </div>          
+            <img class="pImage" src="img/00.png" alt="Filler image">
+        </div>
+    </section>
+    <!-- vison -->
+    <section class="section03" >
+        <div class="title">
+            <h2>VISON</h2>
+            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nulla in augue sed orci tincidunt molestie eu quis mi. Sed nec ipsum quis urna tincidunt ullamcorper.
+            </h6>
+        </div>
+        <section class="cluster clusterGreat">
+            <div class="circle clusterPieces"></div>
+            <div class="owlHorned clusterPieces"><img src="img/05.png" />
+                <div class="caption"><span>/01</span> GREAT HORNED OWL</div>
+            </div>
+            <img class="dotsBlue clusterPieces" src="img/03.png" />
+            <img class="owlHorned  clusterPieces" src="img/06.png" />
+            <!-- <div id="del1" class="delayed-section" data-scrub="0.4">
+                <div class="innerContainer">
+                <img width="575" src="img/01.png" alt="me">
+                </div>
+            </div>
+            <div id="del2" class="delayed-section" data-scrub="0.2">
+                <div class="innerContainer">
+                <img width="575" src="img/02.png" alt="me">
+                </div>
+            </div>
+            <div id="del3" class="delayed-section" data-scrub="0.6">
+                <div class="innerContainer">
+                <img width="575" src="img/03.png" alt="me">
+                </div>
+            </div> -->
+        </section>
+    </section>
+    <!--  SERVICES -->
+    <section class="section04">
+        <div class="title">
+            <h2>SERVICES</h2>
+            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nulla in augue sed orci tincidunt molestie eu quis mi.
+            </h6>
+        </div>
+        <div>
+
+        </div>
+    </section>
+    <!--WEB DEVELOP  -->
+    <section class="section05">
+
+    </section>
+    <!-- count -->
+    <section class="section06">
+
+    </section>
+    <!-- Blog -->
+    <section class="section07">
+
+    </section>
+    <!-- partner -->
+    <section class="section08">
+
+    </section>
+    <!-- contact -->
+    <section class="section09">
+
+    </section>
+    <footer>
+
+    </footer>
+
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js'></script><script  src="./js/bg-script.js"></script>
+    <!-- script -->
+    <script type="text/javascript" src="./js/gsap.min.js"></script>
+    <script type="text/javascript" src="./js/ScrollTrigger.min.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+
+</body>
+</html>
