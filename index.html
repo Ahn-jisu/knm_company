@@ -27,38 +27,44 @@
                 <li><a href="#contact"><span>Contact</span></a></li>
             </ul>
         </nav>
-        <div class="window">
-            <div class="header">
-              <div class="burger-container">
-                <div id="burger">
-                  <div class="bar topBar"></div>
-                  <div class="bar btmBar"></div>
-                </div>
-              </div>
-              <div class="icon icon-apple"></div>
-              <ul class="menu">
-                <li class="menu-item"><a href="#">Mac</a></li>
-                <li class="menu-item"><a href="#">iPad</a></li>
-                <li class="menu-item"><a href="#">iPhone</a></li>
-                <li class="menu-item"><a href="#">Watch</a></li>
-                <li class="menu-item"><a href="#">TV</a></li>
-                <li class="menu-item"><a href="#">Music</a></li>
-                <li class="menu-item"><a href="#">Support</a></li>
-              </ul>
-              <div class="shop icon icon-bag"></div>
-            </div>
-        </div>
-        <script>
-            (function(){
-                var burger = document.querySelector('.burger-container'),
-                    header = document.querySelector('.header');
-                
-                burger.onclick = function() {
-                    header.classList.toggle('menu-opened');
-                }
-            }());
-        </script>
     </header>
+    <div class="window">
+        <div class="header">
+            <div>
+                <div class="logo"><a href="index.html"><img src="img/logo.svg" alt="logo"></a></div>
+                <div class="burger-container">
+                  <div id="burger">
+                    <div class="bar topBar"></div>
+                    <div class="bar btmBar"></div>
+                  </div>
+                </div>
+            </div>
+            <ul class="menu">
+                <li class="menu-item"><a href="#">HOME</a></li>
+                <li class="menu-item"><a href="index.html#introduction"><span>Introduction</span></li>
+                <li class="menu-item"><a href="index.html#vison"><span>VISON</span></li>
+                <li class="menu-item"><a href="index.html#services"><span>Services</span></a></li>
+                <li class="menu-item"><a href="index.html#webdevelop"><span>WEB develop</span></a></li>
+                <li class="menu-item"><a href="index.html#blog"><span>blog</span></a></li>
+                <li class="menu-item"><a href="index.html#contact"><span>Contact</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        (function(){
+            var burger = document.querySelector('.burger-container'),
+                header = document.querySelector('.header');
+                menu = document.querySelector('.menu-item a');
+            
+            burger.onclick = function() {
+                header.classList.toggle('menu-opened');
+                body.classList.toggle("not-scroll");
+            }
+            menu.onclick = function() {
+                header.classList.remove('menu-opened');
+            }
+        }());
+    </script>
     <main>
         <!-- rainbow -->
             <canvas id="webgl-canvas"></canvas>
@@ -129,7 +135,7 @@
             <div class="container1 max-width1400">
                 <div class="pContent">
                 <h2 class="skewElem"><strong>KNM</strong><br/>MARKETING</h2>
-                <h6 class="skewElem">마케팅과 데이터 & 테크를 융합해 세상에 없던 마케팅을 합니다.</h6>
+                <h6 class="skewElem">마케팅과 데이터 & 테크를 융합해<br class="br-mobile"/> 세상에 없던 마케팅을 합니다.</h6>
                 <button><p>Contact us</p> </button>
                 </div>
             </div>          
@@ -183,7 +189,7 @@
         <div class="circle circle2 clusterPieces"></div>
     </section>
     <!--  SERVICES -->
-    <section class="section04">
+    <section class="section04" id="services">
         <div class="title max-width1400">
             <h2>SERVICES</h2>
             <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
@@ -230,7 +236,7 @@
     </section>
     <div id="globe"></div>
     <!--WEB DEVELOP  -->
-    <section class="section05">
+    <section class="section05" id="webdevelop">
 
         <div class="title">
             <h2>WEB DEVELOP</h2>
@@ -339,7 +345,7 @@
         </ul>
     </section>
     <!-- Blog -->
-    <section class="section07">
+    <section class="section07" id="blog">
         <div class="title">
             <h2>BLOG</h2>
             <h6>
@@ -398,7 +404,7 @@
         </div>
     </section>
     <!-- contact -->
-    <section class="section09">
+    <section class="section09" id="contact">
         <div class="max-width1400">
             <div>
                 <div class="title">
