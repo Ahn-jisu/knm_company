@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    
     <title>KNM Company</title>
 </head>
 <body>
@@ -15,14 +18,46 @@
         <div class="logo"><a href="/"><img src="img/logo.svg" alt="logo"></a></div>
         <nav>
             <ul>
-                <li><a href=""><span>HOME</span></a></li>
-                <li><a href=""><span>Introduction</span></a></li>
-                <li><a href=""><span>Services</span></a></li>
-                <li><a href=""><span>Team</span></a></li>
-                <li><a href=""><span>blog</span></a></li>
-                <li><a href=""><span>Contact</span></a></li>
+                <li class="on"><a href=""><span>HOME</span></a></li>
+                <li><a href="#introduction"><span>Introduction</span></a></li>
+                <li><a href="#vison"><span>VISON</span></a></li>
+                <li><a href="#services"><span>Services</span></a></li>
+                <li><a href="#webdevelop"><span>WEB develop</span></a></li>
+                <li><a href="#blog"><span>blog</span></a></li>
+                <li><a href="#contact"><span>Contact</span></a></li>
             </ul>
         </nav>
+        <div class="window">
+            <div class="header">
+              <div class="burger-container">
+                <div id="burger">
+                  <div class="bar topBar"></div>
+                  <div class="bar btmBar"></div>
+                </div>
+              </div>
+              <div class="icon icon-apple"></div>
+              <ul class="menu">
+                <li class="menu-item"><a href="#">Mac</a></li>
+                <li class="menu-item"><a href="#">iPad</a></li>
+                <li class="menu-item"><a href="#">iPhone</a></li>
+                <li class="menu-item"><a href="#">Watch</a></li>
+                <li class="menu-item"><a href="#">TV</a></li>
+                <li class="menu-item"><a href="#">Music</a></li>
+                <li class="menu-item"><a href="#">Support</a></li>
+              </ul>
+              <div class="shop icon icon-bag"></div>
+            </div>
+        </div>
+        <script>
+            (function(){
+                var burger = document.querySelector('.burger-container'),
+                    header = document.querySelector('.header');
+                
+                burger.onclick = function() {
+                    header.classList.toggle('menu-opened');
+                }
+            }());
+        </script>
     </header>
     <main>
         <!-- rainbow -->
@@ -63,8 +98,8 @@
         <!-- rainbow end -->
         <div class="shadow"></div>
         <div class="title">
-            <h1>KNM MARKETING</h1>
-            <h4>MARKETING THAT everyone WANTS</h4>
+            <h1><strong>KNM</strong> MARKETING</h1>
+            <h4>MARKETING THAT <br class="br-mobile"/> EVERYONE WANTS</h4>
         </div>
     </main>
     <!-- AD -->
@@ -78,103 +113,358 @@
             <div class="sec01-text clusterPieces dotsWhite">
                 <h3>
                     데이터를 기반한<br>
-                    과학적인 마케팅이 궁금하다면?
+                    과학적인 마케팅이<br class="br-mobile"/> 궁금하다면?
                 </h3>
-                <h6>보이지 않는 것을 찾는 힘. 깊이 생각하고 크게 움직여 세상에 없던 마케팅을 찾다.</h6>
-                <button>Contact us</button>
+                <h6>보이지 않는 것을 찾는 힘. <br class="br-mobile"/>깊이 생각하고 크게 움직여 세상에 없던 마케팅을 찾다.</h6>
+                <button>
+                    <p> Contact us</p>
+                </button>
             </div>
            
         </section>      
     </section>    
     <!-- ABOUT KNM -->
-    <section class="section02">
+    <section class="section02"  id="introduction">
         <div class="pSection" id="pSection">
-            <div class="container1">
+            <div class="container1 max-width1400">
                 <div class="pContent">
-                <h2 class="skewElem"><strong>KNM</strong>MARKETING</h2>
+                <h2 class="skewElem"><strong>KNM</strong><br/>MARKETING</h2>
                 <h6 class="skewElem">마케팅과 데이터 & 테크를 융합해 세상에 없던 마케팅을 합니다.</h6>
-                <button>Contact us</button>
+                <button><p>Contact us</p> </button>
                 </div>
             </div>          
             <img class="pImage" src="img/00.png" alt="Filler image">
         </div>
     </section>
     <!-- vison -->
-    <section class="section03" >
+    <section class="section03" id="vison">
         <div class="title">
             <h2>VISON</h2>
-            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Nulla in augue sed orci tincidunt molestie eu quis mi. Sed nec ipsum quis urna tincidunt ullamcorper.
+            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                Nulla in augue sed orci tincidunt molestie eu quis mi. <br class="br-mobile"/>Sed nec ipsum quis urna tincidunt ullamcorper.
             </h6>
         </div>
         <section class="cluster clusterGreat">
             <div class="circle clusterPieces"></div>
-            <div class="owlHorned clusterPieces"><img src="img/05.png" />
-                <div class="caption"><span>/01</span> GREAT HORNED OWL</div>
-            </div>
-            <img class="dotsBlue clusterPieces" src="img/03.png" />
-            <img class="owlHorned  clusterPieces" src="img/06.png" />
-            <!-- <div id="del1" class="delayed-section" data-scrub="0.4">
-                <div class="innerContainer">
-                <img width="575" src="img/01.png" alt="me">
+            <div class="owlHorned owlHorned2 clusterPieces sec03-con">
+                <img src="img/01.png" />
+                <div class="caption">
+                    <h4>Branding</h4>
+                    <p>
+                        우리는 바닷 속 보물을 찾는<br/>
+                        브랜드의 시작과 완성을 만드는<br/>
+                        그래서 내일을 향해 나아가는<br/> 
+                    </p>
                 </div>
             </div>
-            <div id="del2" class="delayed-section" data-scrub="0.2">
-                <div class="innerContainer">
-                <img width="575" src="img/02.png" alt="me">
+            <div class="dotsBlue clusterPieces sec03-con">
+                <img src="img/02.png" alt="">
+                <div class="caption">
+                    <h4>MARKETING</h4>
+                    <p>
+                        마케팅에는 내일이 없습니다.<br/>
+                        우리 모두가 원하는 것은<br/>
+                        오늘의 마케팅, 내일의 성공<br/>
+                    </p>
                 </div>
             </div>
-            <div id="del3" class="delayed-section" data-scrub="0.6">
-                <div class="innerContainer">
-                <img width="575" src="img/03.png" alt="me">
+            <div class="owlHorned  clusterPieces sec03-con">
+                <img  src="img/03.png" />
+                <div class="caption">
+                    <h4>PLANNING</h4>
+                    <p>
+                        준비된 기획에서부터<br/>
+                        여러분의 성공은<br/>
+                        이미 준비되어 있습니다.<br/>
+                    </p>
                 </div>
-            </div> -->
+            </div>
         </section>
+        <div class="circle circle2 clusterPieces"></div>
     </section>
     <!--  SERVICES -->
     <section class="section04">
-        <div class="title">
+        <div class="title max-width1400">
             <h2>SERVICES</h2>
-            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
                 Nulla in augue sed orci tincidunt molestie eu quis mi.
             </h6>
         </div>
-        <div>
-
+        <div class="sec04-box">
+            <div class="sec04-con1">
+                <img src="img/04.png" alt="">
+            </div>
+            <div class="sec04-con2">
+                <ul>
+                    <li>
+                        <h2>DEGITAL<br/>MARKETING</h2>
+                        <h5>
+                            CONTENTS<br/>
+                            INFLUENCER<br/>
+                            WEB PAGE<br/>
+                            VIRAL, SNS, SEO<br/>
+                        </h5>
+                    </li>
+                    <li>
+                        <h2>BRANDIG</h2>
+                        <h5>PERSONAL<br/>
+                            COMPANY<br/>
+                            PRODUCT<br/>
+                        </h5>
+                    </li>
+                    <li>
+                        <h2>EVENT&<br/>EXPERIENCE</h2>
+                        <h5>PLACE<br/>
+                            CONCERT<br/>
+                            EXHIBITION</h5>
+                    </li>
+                    <li>
+                        <h2>DATA&TECH</h2>
+                        <h5>ANALYSIS<br/>
+                            DATA TOOL<br/>
+                            DATA DRIVEN</h5>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
+    <div id="globe"></div>
     <!--WEB DEVELOP  -->
     <section class="section05">
 
+        <div class="title">
+            <h2>WEB DEVELOP</h2>
+            <h6>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                Nulla in augue sed orci tincidunt molestie eu quis mi. Sed nec ipsum quis urna tincidunt ullamcorper. 
+            </h6>
+        </div>
+        <div>
+            <div class="tabs">
+                <input type="radio" id="tab1" name="tab-control"checked>
+                <input type="radio" id="tab2" name="tab-control">
+                <input type="radio" id="tab3" name="tab-control">  
+                <ul>
+                    <li title="Features">
+                    <label for="tab1" role="button"><br><span>ALL</span></label>
+                    </li>
+                    <li title="Delivery Contents">
+                    <label for="tab2" role="button"><br><span>Webframe</span></label>
+                    </li>
+                    <li title="Shipping">
+                    <label for="tab3" role="button"><br><span>Component</span></label>
+                    </li>
+                </ul>
+                
+                <div class="slider-bar"><div class="indicator"></div></div>
+        
+                <div class="content">
+                    <section>
+                        <div id="app" class="container">
+                            <card data-image="img/k1.png">
+                              <h1 slot="header">WEBFRAME</h1>
+                              <p slot="content2">이미지 중심 웹사이트</p>
+                            </card>
+                            <card data-image="img/k2.png">
+                              <h1 slot="header">COMPONENT</h1>
+                              <p slot="content2">감각적인 이미지 제공을 위해서</p>
+                            </card>
+                            <card data-image="img/k2.png">
+                                <h1 slot="header">COMPONENT</h1>
+                                <p slot="content2">감각적인 이미지 제공을 위해서</p>
+                              </card>
+                          </div>                          
+                    </section>
+                    <section>
+                        <div id="app" class="container">
+                            <div class="card-wrap">
+                                <div class="card">
+                                    <card class="card-bg">
+                                        <img src="img/k1.png" alt="">
+                                        <h1 slot="header">WEBFRAME</h1>
+                                        <p slot="content2">이미지 중심 웹사이트</p>
+                                    </card>
+                                </div>
+                            </div>
+                        </div> 
+                    </section>
+                    <section>
+                        <div id="app" class="container">
+                            <div class="card-wrap">
+                                <div class="card">
+                                    <card class="card-bg">
+                                        <img src="img/k2.png" alt="">
+                                        <h1 slot="header">COMPONENT</h1>
+                                        <p slot="content2">감각적인 이미지 제공을 위해서</p>
+                                    </card>
+                                </div>
+                            </div>
+                        </div> 
+                    </section>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- count -->
     <section class="section06">
-
+        <ul>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+                    <image id="calendar-check" width="80" height="80" opacity="0.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAABgAAAAYADwa0LPAAABl0lEQVRo3u2ZPU7DQBCF36AUNAhRIQo6UOjCYVDOkhtQAR03oIAU1BSpqZGQgA6JtAhhOig+GkcKlncT/66N9rU7O/u+GXttr6WosLKiEwD+JDArnKPOfBtNVqcNRYDQ8gIAR8AtkJAqJ6aSPPmSdO2hz6PzhgH2JT1I2glc5A9JIzN7K9qBiw6YV+rhzDXo60AiaSu0+1SJmW0XBUAdkuv58L93oT4oAoRW7wEG6wZWfessqnV3wd53IAKEVjAA4BSYNLmA97W3BvMLTRwx1dZvCgA4z6S+BiwnrnsAmcoDTIGBI7ZbAEXMtwoAHAC7K3LlXTaDFXOaBwAOgTnwDOzVUfnWAIBN4HUp5DHbiTKVb7sDJ8D3UtjTohNlK98qQBo3Bn4ynbgsW/nWARydKF35IAAeiFLmgwDkQJQ2HwwgnTcGrqqYL7L+2udCob/I4rlQV9V7AN+N9qWlw91SO0F9+nQN+DowC2g4qzvXgG8XGkq6V/h/BO+Sjs1snjfo7ICZvUgaSZpKSgIYTyTd+MxHRUVFhdcv0resvdhFkMwAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjItMDItMDRUMTQ6MjE6NTcrMDA6MDDlFozxAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIyLTAyLTA0VDE0OjIxOjU3KzAwOjAwlEs0TQAAAABJRU5ErkJggg=="/>
+                </svg>
+                <h2>51</h2>
+                <h4>완료한 프로젝트</h4>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+                    <image id="account-group" width="80" height="80" opacity="0.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAABgAAAAYADwa0LPAAACt0lEQVRo3u2YO08UURiG3yOEjRgXY1wCUhK1MlIaEwv1HyBWlt4KF2pj5yVaeUmMNhIrbbQUexOMaCGLYDQW/gESCe7SQGAfizmLcJzZcwZnXYzzJJvsZL7zfu935txmpJycnJycnJyc7QPQC9wEKsCS/U0DN4DedvvzmT8DVEmmCoy022cz83X81LddEXbYVAPMN/gBlLLIvSOjGsYk7U4RX5Q0mnVHbgIoAGPAOzsRF4C3wEWgw4mdSdH7DaYdjQ6rPWVzLdnco0AhrfkBj6miE59m+KxPaEej2CS2AgzEed0RY74g6ZWkI01qrGfxkD3XGxmSNBH3JOLmwCWPeUnqc66/baEAt02/J35I0oWQAs4GJB9yrie2UMBLj2Ycfm9ALWD8jjtt0i6ji8A+R+NJ2nnzJwXUYibyCOEb2bDTtodo1cmkgPeBvXgrpu0I0SbVrOeHY9rdDsw5FVLAaKDYCjAY074EXAc+2CdVs/+v4QwbGz9otUIohxRQIFp3vb0BdHoF/fk6rZaPCtAVKjrgKWIK6AsSC8vX5ymiQsJG1ky0Cyhb4RrwHZgEzgX3RLp8BeA88MbmqhEdXcqtyLdtMFmI2B46Iem4pMOSDknaq+jUKUlVSQuSvkqalTQp6bUxZqWt1QMHgXGi5TEti8Bj4EArjO0BTgN3gcsx93cBj4C1LRh3WQUeAt0xecrAHeulJ8T4MeAFsGzFq/y+5e8HvmRg3OUz0O/kKvHriLIMPAeOxhkvAs9iRO85cd3ApxaYbzAH7HRy3ndi6sBTGkcZonPIxwTBk47Y1Raab3DFyXkqIW4GKIpoLCdRcsTm/kIBs07O3iaxDwwwLynpC0GnMWZtg9iypFZvKivGmPU3L6L379WE2HkDJL7KGWM27RPNYrMkTd6sPqu0jX++gJycnJyc/5ufL6zE2hzg7AcAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjItMDItMDRUMTQ6MjI6NTIrMDA6MDBcGRhVAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIyLTAyLTA0VDE0OjIyOjUyKzAwOjAwLUSg6QAAAABJRU5ErkJggg=="/>
+                </svg>                  
+                <h2>39</h2>
+                <h4>함께한 클라이언트</h4>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+                    <image id="all-inclusive" width="80" height="80" opacity="0.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAABgAAAAYADwa0LPAAADS0lEQVRo3u2Y0YtUZRiHn2/RdqV2183FrFiRWoUu1nKD7ouCLEGjWhJpNbr0IvIvCC8TL/oTCqIylrKypJAsYqkuZFlXMSHoYt2wrDQFd9vs6eKcqcPnd2bOzOxFwXluhjnf+/1+78y85z3vN1BTU1NTU1NTU/O/JZQtqAEYB54ERoH1wB/Aj8A3wEchhJ9WIgl1A7ADeAjYANwCXAS+B44Bp0IIVhUL6tPqOZtzQ31TvaeLxLeob+dazfhOnci/1KaCA+qHtseiuq+D5F9Ul9r0+lgdLBO8XT3dpmCRQ2pPhcR71MNd+JxVhxt6IRddDRwHHon8loH38rWFvDbHgOfy15gp4PkQwvWS5HuBN4CJxPIM8A5whuxeuxt4HNgFrI5ivwAeCyEsN4RfTnzSr9R7SxIJ6l71WmLfByV71qonE/FX1T2W1Lc6qk4n9h1oBAyol6LFz/Jvq1U5jKsLhX3n1dFE3Ig6l0jignp/BZ9e9US09xd1EHUyWvhVXddKtCC+Ka/L6WJtFtbH1PlE8mfUjW34DKu/RRp7Uaeii69UFS2ID6lrEtcfVi8nkv9SHerA52CkM4VZjy2yrV3hErPdZi025l21r0PNByOtc+Q3UZHbViD5l0w/nF6zQqttotsf6V1F/T262N+FQVBfTST+VyelmdAfiHSvpEpovEPxvrw8YhbV3d0mn3vcVEI9wOkobmcHwkPAp8Az0dIVYHsI4a0oftCykaA5u6L3s2VtdLiqorrRrCXGzKtjifi71BmzsaWdNrremzvankZd/RwtnLDag+wBs4dRzJw6koi/T/2hEHehSsmaPcg+jzwu/nO/5l0jZlrdXCIY8l8uNUqcVNeW7DuaiL+m7rOkO5mN3F8n9u2Hf4e5VcAnwKPR/mXgKNkwNw/0kg1xE8DWhN8RYDKEsFSSTB/ZMPdsYnmObJibBZaAEbJhbiewKoo9DuwIIdwoig+ps3bOYauP04e68DllkzNBv/p+m4KL6gutEk94TarX2/Q6ot5aRfwpswGtGY0j5WiFfMt8Nqmvq3+28JpRn0hphBYG28gO9ZuBO/LaXAC+BY6t4KF+HbCd7FB/J7CG7M+D87nP2ZXwqampqampqamp+Y/xN4JtzjpKhYfkAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTAyLTA0VDE0OjIzOjUzKzAwOjAwFax43wAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wMi0wNFQxNDoyMzo1MyswMDowMGTxwGMAAAAASUVORK5CYII="/>
+                </svg>
+                <h2>11</h2>
+                <h4>재의뢰 프로젝트</h4>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+                    <image id="face-man-shimmer" width="80" height="80" opacity="0.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAABgAAAAYADwa0LPAAAD5UlEQVRo3u2ZzW+VRRTGn2kJSK8fF8JHSurCplRIJCSAmpRIov4DgkbXJqTg1sSEBCExYOIKWxK/dy5UggWVsHHhP6A2fiwkVUklYFuRRCjcC4ntz8VMdTKde+/Me99eEtMnuWne5pznPGdm3jNn5pWWsYwogN3A0N3W0U4CZ4CzrexMScG6JO2S9JT7OyipT1JFEpJmJU1J+knSuKQvJX1njKEB34CkC07fVmPMxFKNUi9wHLhEPn4DjgKrIrxveXbvLoXwNcAoUC8gHOf3HvBwhHsTcMuzrQEPlil+HzBTUPhV4DVgQ4R3wI38rYhfDXgb2NyO8G436kUwAbwErI7wDgFjwFwCzxz25f63Oq1IFH+PpI8k7W1zAkspGkVG/nTBkY8toTeATZE4/W6Gb0b8bgMfAluKJFB02TRDZ15i7Aubg98z7eeAz4E9Qdz2yyi2VOZUmzrQB5wrOCvnvdgDwN8uwcGiCZzMFDDq/HqA8wWT2OPFHyOhlWgkvpe8TWoGWOP5rwDeKZDAFx7HEF65JLJjN0vgeGbg5xrwPIutPKmYI1JpgC3AkVTxXdg+JRWjLfjWASPAnUS+DyIc7wOTQOt9BHgsQ/xnQOpm2IdtIy634KwDGz2/jfy3nLenBDqUKP4cdofOAmCAHS7OJ8APwB/YzaoGXAEOevbHvJivpAT4NEH8SaA7V3yBZCvANS/uxylOPzYRfhVotx/KSeCJIP73KU5/RoTfwb6Iazsl3mkZDHTMpDiF1eJ1Is2XZ18Fht3vgQT+ZHvgvkDL7SIJrGwh5qJn+2szUQXsV7VKoCviNxs8398k3xckPeQ990t6vkT7MLlQWzSBqeC5v0kAlIdc+zD2VEuPSBnd38S26pbBAn5JWEI59sOBltOhTWwGvgmen2wUwBjzl6Qdkobdb6cx5npZ9pKeDp6/TpmBsJW4TuQwvtRwm9hsoGVXimOsmXvxLiRwMNAwib0BTHIO2+kLJDZtJYmvsPh4eiyHIHagebmDCRwJYteB3lyS8DaiBjzaAfHbXCwfI0WIqsB0QHSFJm1FCeLXAz8HMaeBalHCfcB8QDgOrF8i8d8GseaBZ9olHmExJoBHShS/LTLyACfKIO/GXqiGqAGHgUob3BXg1ciaB3utUs6hCdsVxpJYeC8OAD0ZfD3YOt/oJm+MnGuUjJl4M/JOLOAG9ow7DDzu1vRK99vg/ncAOMXiHdZf8ydKG/kGieyNVKcyME2njqvYEtvOJyYfdWyhqHZEfJBIL/baI+cibAGTzjdvhw1Q5mfWnVr8mfVeZ3JT0mVJE7It8VeSxo0x8x0f9WUs43+GfwBbbUgbipx8ZgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0wMi0wNFQxNDoyNjoyMCswMDowMMiooB8AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMDItMDRUMTQ6MjY6MjArMDA6MDC59RijAAAAAElFTkSuQmCC"/>
+                </svg>
+                <h2>125</h2>
+                <h4>참여 인플루언서 수</h4>
+            </li>
+        </ul>
     </section>
     <!-- Blog -->
     <section class="section07">
-
+        <div class="title">
+            <h2>BLOG</h2>
+            <h6>
+                KNM Marketing의 최신 소식 입니다.
+            </h6>
+        </div>
+        <div class="sec07-box responsive">
+            <div class="sec07-con">
+                <a href="#">
+                    <div><img src="img/05.png" alt=""></div>
+                    <p>Personal Branding</p>
+                </a>
+            </div>
+            <div class="sec07-con">
+                <a href="#">
+                    <div><img src="img/06.png" alt=""></div>
+                    <p>Personal Branding</p>
+                </a>
+            </div>
+            <div class="sec07-con">
+                <a href="#">
+                    <div><img src="img/07.png" alt=""></div>
+                    <p>Personal Branding</p>
+                </a>
+            </div>
+            <div class="sec07-con">
+                <a href="#">
+                    <div><img src="img/05.png" alt=""></div>
+                    <p>Personal Branding</p>
+                </a>
+            </div>
+            <div class="sec07-con">
+                <a href="#">
+                    <div><img src="img/06.png" alt=""></div>
+                    <p>Personal Branding</p>
+                </a>
+            </div>
+            <div class="sec07-con">
+                <a href="#">
+                    <div><img src="img/07.png" alt=""></div>
+                    <p>Personal Branding</p>
+                </a>
+            </div>
+        </div>
     </section>
     <!-- partner -->
     <section class="section08">
-
+        <h4>OUR PARTNER</h4>
+        <div class="autoplay max-width1400">
+            <div><img src="img/clinet/1.jpg" alt=""></div>
+            <div><img src="img/clinet/2.png" alt=""></div>
+            <div><img src="img/clinet/3.png" alt=""></div>
+            <div><img src="img/clinet/4.png" alt=""></div>
+            <div><img src="img/clinet/5.jpg" alt=""></div>
+            <div><img src="img/clinet/5.png" alt=""></div>
+        </div>
     </section>
     <!-- contact -->
     <section class="section09">
+        <div class="max-width1400">
+            <div>
+                <div class="title">
+                    <h2>CONTACT</h2>
+                    <h6>
+                        KNM 마케팅입니다! 현재 마케팅을 계획 중이신가요?<br>
+                        상담 메일을 작성하신다면 최대한 빠르게 연락드리겠습니다.
+                    </h6>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-con1">
+                        <input type="text" placeholder="성함">
+                        <input type="text" placeholder="이메일 또는 연락처">
+                    </div>
+                    <textarea class="contact-con2"  rows="5">현재 계획 중이신 프로젝트에 대해서 알려주세요! 자세할수록 좋습니다 :)
+                    </textarea>
+                    <button> 제출하기 </button>
+                </div>
+            </div>
+            <div class="contact-box2">
+                <h2>
+                    let's<br/>
+                    have a<br/>
+                    chat<br/>
+                </h2>
+            </div>
+        </div>
 
     </section>
     <footer>
-
+        <ul class="max-width1400">
+            <li>
+                <img src="img/f-logo.svg" alt="logo">
+            </li>
+            <li>
+                <div>
+                    <span>Address</span>
+                    <p>서울특별시 영등포구 국제금융로 20 율촌빌딩 5층, 528호</p>
+                </div>
+                <div>
+                    <span>Tell</span>
+                    <p>010-9379-2156</p>
+                </div>
+                <div>
+                    <span>Email</span>
+                    <p>dong7782@naver.com</p>
+                </div>
+            </li>
+        </ul>
+        <div class="copyrights">
+            <p>Copyrights © 2022 All Rights Reserved By KNM Marketing</p>
+        </div>
     </footer>
 
     <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js'></script><script  src="./js/bg-script.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'></script><script  src="./js/webdevelop.js"></script>
     <!-- script -->
-    <script type="text/javascript" src="./js/gsap.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="./js/ScrollTrigger.min.js"></script>
     <script type="text/javascript" src="./js/script.js"></script>
-
-</body>
+    <script  src="./script.js"></script>
+   
+    </body>
 </html>
